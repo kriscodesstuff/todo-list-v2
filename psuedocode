@@ -1,0 +1,9 @@
+# I want my user to start out at the all tasks page where all the tasks will go
+    # I need to create a div where the all tasks page will be appended to
+    # I need to create a header with today as its innerText
+    # I need to create a p element with no tasks as its innerText
+# I want my user to be able to click the add task button to make a new task
+# I want there to be a tab called today where the tasks that are scheduled for today will go
+# I want there to be an upcoming tab where the tasks that arent due yet will go
+# I want my user to be able to click the Create New Project button to create a new Project
+# I want there to be a default project tab called school

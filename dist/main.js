@@ -1,1 +1,1 @@
-console.log("hi");
+(()=>{"use strict";(()=>{const e=document.querySelector("#content"),t=document.createElement("h1"),n=document.createElement("p");t.innerText="All Tasks",n.innerText="No tasks added",e.appendChild(t),e.appendChild(n)})()})();

@@ -10,3 +10,6 @@ const allTasks = () => {
     content.appendChild(p);
 
 }
+
+
+export { allTasks };

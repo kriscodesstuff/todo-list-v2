@@ -5,11 +5,15 @@ const todayTab = document.querySelector('#today-tab');
 const allTasksTab = document.querySelector('#all-tasks-tab');
 const content = document.querySelector('#content');
 
-let loadHomePage = true;
+const loadDefaultPage = (function() {
+    let loadHomePage = true;
 
-if(loadHomePage){
+    if(loadHomePage){
     allTasks();
-}
+    }
+})()
+
+
 
 const switchTabs =  ( function() {
 

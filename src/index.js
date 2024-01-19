@@ -11,18 +11,28 @@ if(loadHomePage){
     allTasks();
 }
 
-todayTab.addEventListener('click', () => {
+const switchTabs =  ( function() {
+
+    const clearPage = () => {
         while(content.hasChildNodes()){
             content.removeChild(content.firstChild);
         }
-    
-    today();
-})
 
-allTasksTab.addEventListener('click', () => {
-    while(content.hasChildNodes()){
-        content.removeChild(content.firstChild);
+        
     }
-    allTasks();
-})
+
+    todayTab.addEventListener('click', () => {
+        clearPage()
+        today();
+    })
+
+
+    allTasksTab.addEventListener('click', () => {
+        clearPage();
+        allTasks();
+    });
+})()
+
+
+
 

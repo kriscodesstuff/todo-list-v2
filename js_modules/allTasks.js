@@ -8,9 +8,9 @@ const allTasks = () => {
     h1.innerText = 'All Tasks';
     p.innerText = 'No tasks added';
 
-    content.appendChild(div);
-    div.appendChild(h1);
-    div.appendChild(p);
+    // content.appendChild(div);
+    content.appendChild(h1);
+    content.appendChild(p);
 
 }
 

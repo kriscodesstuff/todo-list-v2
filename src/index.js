@@ -1,9 +1,12 @@
 import { allTasks } from "../js_modules/allTasks";
 import { today } from "../js_modules/today";
+import { upcoming } from "../js_modules/upcoming";
 
 const todayTab = document.querySelector('#today-tab');
 const allTasksTab = document.querySelector('#all-tasks-tab');
+const upcomingTab = document.querySelector('#upcoming-tab');
 const content = document.querySelector('#content');
+
 
 const loadDefaultPage = (function() {
     let loadHomePage = true;
@@ -20,9 +23,7 @@ const switchTabs =  ( function() {
     const clearPage = () => {
         while(content.hasChildNodes()){
             content.removeChild(content.firstChild);
-        }
-
-        
+        }   
     }
 
     todayTab.addEventListener('click', () => {
@@ -35,6 +36,13 @@ const switchTabs =  ( function() {
         clearPage();
         allTasks();
     });
+
+    upcomingTab.addEventListener('click', () => {
+        clearPage();
+        upcoming();
+    })
+
+
 })()
 
 

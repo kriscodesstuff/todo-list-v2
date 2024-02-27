@@ -6,7 +6,8 @@ const todayTab = document.querySelector('#today-tab');
 const allTasksTab = document.querySelector('#all-tasks-tab');
 const upcomingTab = document.querySelector('#upcoming-tab');
 const content = document.querySelector('#content');
-
+const addTaskBtn = document.querySelector('#add-task');
+const addTaskModal = document.querySelector('.add-task-modal');
 
 const loadDefaultPage = (function() {
     let loadHomePage = true;
@@ -46,5 +47,9 @@ const switchTabs =  ( function() {
 })()
 
 
+const addTask = () => {
+    addTaskModal.classList.remove('hidden');
+}
 
 
+addTaskBtn.addEventListener('click', addTask);

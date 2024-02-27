@@ -7,6 +7,15 @@
     # Create an if statement saying if loadHomePage is true, call the allTasks function
     # If loadHomePage is false, remove the allTasks div from the dom
 # I want my user to be able to click the add task button to make a new task
+    # Select the add task button in the DOM
+    # Create a function that will run everytime the button is clicked
+    # Create a modal that will pop up when the add button is clicked
+    # The modal should have a title box, description box, due date box,priority box,
+    # a cancel button and an add task button
+    # Select the modal add task button in the DOM
+    # Create a function that will retrieve the data added in the boxes once the add task
+    # button is clicked
+    
 # I want there to be a tab called today where the tasks that are scheduled for today will go
 # I want there to be an upcoming tab where the tasks that arent due yet will go
 # I want my user to be able to click the Create New Project button to create a new Project

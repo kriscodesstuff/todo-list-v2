@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div id="container">
+        <div class="add-task-modal hidden">
+            <form action="GET">
+                <input type="text" placeholder="Task name">
+                <input type="text" placeholder="description">
+                <button>Cancel</button>
+                <button>Add Task</button>
+            </form>
+        </div>
         <nav>
             <ul>
-                <li>Add Task</li>
+                <li id="add-task">Add Task</li>
                 <li id="all-tasks-tab">All Tasks</li>
                 <li id="today-tab">Today</li>
                 <li id="upcoming-tab">Upcoming</li>

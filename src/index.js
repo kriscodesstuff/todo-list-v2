@@ -48,7 +48,7 @@ const switchTabs =  ( function() {
 })()
 
 
-const addTask = () => {
+const openTaskModal = () => {
     addTaskModal.classList.remove('hidden');
 }
 
@@ -61,5 +61,5 @@ const getTaskInfo = () => {
 }
 
 
-addTaskBtn.addEventListener('click', addTask);
+addTaskBtn.addEventListener('click', openTaskModal);
 addTaskModalBtn.addEventListener('click',getTaskInfo);

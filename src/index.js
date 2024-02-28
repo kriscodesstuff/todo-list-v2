@@ -52,7 +52,7 @@ const openTaskModal = () => {
     addTaskModal.classList.remove('hidden');
 }
 
-const getTaskInfo = () => {
+const addTaskInfo = () => {
     const taskName = document.getElementById('name').value;
     const taskDescription = document.getElementById('description').value
     localStorage.setItem("title", taskName);
@@ -62,4 +62,4 @@ const getTaskInfo = () => {
 
 
 addTaskBtn.addEventListener('click', openTaskModal);
-addTaskModalBtn.addEventListener('click',getTaskInfo);
+addTaskModalBtn.addEventListener('click',addTaskInfo);

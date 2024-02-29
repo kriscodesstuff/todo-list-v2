@@ -16,11 +16,11 @@
     # Select the modal add task button in the DOM
     # Create a function that will retrieve the data added in the boxes once the add task
     # button is clicked
-        # Create an empty array
-        # Select taskInfo values
-        # Push values into their own array
-        # Push that array into the empty array you created earlier
-        # Add array into localStorage
+        # Create an empty array 
+        # Get the value of task name and description
+        # Create a new task object with the task name and description as the value
+        # Everytime a new task is added, push it into the empty array
+        # Set the array to the tasks item in localstorage
 # Create a function that gets the task info 
     # Create a task object
     # Create a name key and set its value as the task name

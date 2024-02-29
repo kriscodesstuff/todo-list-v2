@@ -3,9 +3,11 @@ import { today } from "../js_modules/today";
 import { upcoming } from "../js_modules/upcoming";
 import { getDomElements } from "../js_modules/getDomElements";
 import { openTaskModal } from "../js_modules/openTaskModal";
+import { addTaskInfo } from "../js_modules/addTaskInfo";
 
 const getDom = getDomElements();
 openTaskModal();
+addTaskInfo();
 
 const loadDefaultPage = (function() {
     let loadHomePage = true;

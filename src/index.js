@@ -2,8 +2,10 @@ import { allTasks } from "../js_modules/allTasks";
 import { today } from "../js_modules/today";
 import { upcoming } from "../js_modules/upcoming";
 import { getDomElements } from "../js_modules/getDomElements";
+import { openTaskModal } from "../js_modules/openTaskModal";
 
 const getDom = getDomElements();
+openTaskModal();
 
 const loadDefaultPage = (function() {
     let loadHomePage = true;
@@ -41,14 +43,4 @@ const switchTabs =  ( function() {
 
 
 
-const addTaskInfo = () => {
-    const taskName = document.getElementById('name').value;
-    const taskDescription = document.getElementById('description').value
-    localStorage.setItem("name", taskName);
-    localStorage.setItem("description", taskDescription);
-    getDom.addTaskModal.classList.add('hidden');
-}
 
-
-
-getDom.addTaskModalBtn.addEventListener('click',addTaskInfo);

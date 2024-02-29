@@ -40,9 +40,6 @@ const switchTabs =  ( function() {
 })()
 
 
-const openTaskModal = () => {
-    getDom.addTaskModal.classList.remove('hidden');
-}
 
 const addTaskInfo = () => {
     const taskName = document.getElementById('name').value;
@@ -53,5 +50,5 @@ const addTaskInfo = () => {
 }
 
 
-getDom.addTaskBtn.addEventListener('click', openTaskModal);
+
 getDom.addTaskModalBtn.addEventListener('click',addTaskInfo);

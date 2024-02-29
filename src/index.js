@@ -1,14 +1,9 @@
 import { allTasks } from "../js_modules/allTasks";
 import { today } from "../js_modules/today";
 import { upcoming } from "../js_modules/upcoming";
+import { getDomElements } from "../js_modules/getDomElements";
 
-const todayTab = document.querySelector('#today-tab');
-const allTasksTab = document.querySelector('#all-tasks-tab');
-const upcomingTab = document.querySelector('#upcoming-tab');
-const content = document.querySelector('#content');
-const addTaskBtn = document.querySelector('#add-task');
-const addTaskModal = document.querySelector('.add-task-modal');
-const addTaskModalBtn = document.querySelector('#add-task-modal-button');
+const getDom = getDomElements();
 
 const loadDefaultPage = (function() {
     let loadHomePage = true;
@@ -28,28 +23,25 @@ const switchTabs =  ( function() {
         }   
     }
 
-    todayTab.addEventListener('click', () => {
+    getDom.todayTab.addEventListener('click', () => {
         clearPage()
         today();
     })
 
-
-    allTasksTab.addEventListener('click', () => {
+    getDom.allTasksTab.addEventListener('click', () => {
         clearPage();
         allTasks();
     });
 
-    upcomingTab.addEventListener('click', () => {
+    getDom.upcomingTab.addEventListener('click', () => {
         clearPage();
         upcoming();
     })
-
-
 })()
 
 
 const openTaskModal = () => {
-    addTaskModal.classList.remove('hidden');
+    getDom.addTaskModal.classList.remove('hidden');
 }
 
 const addTaskInfo = () => {
@@ -57,9 +49,9 @@ const addTaskInfo = () => {
     const taskDescription = document.getElementById('description').value
     localStorage.setItem("name", taskName);
     localStorage.setItem("description", taskDescription);
-    addTaskModal.classList.add('hidden');
+    getDom.addTaskModal.classList.add('hidden');
 }
 
 
-addTaskBtn.addEventListener('click', openTaskModal);
-addTaskModalBtn.addEventListener('click',addTaskInfo);
+getDom.addTaskBtn.addEventListener('click', openTaskModal);
+getDom.addTaskModalBtn.addEventListener('click',addTaskInfo);

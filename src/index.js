@@ -55,7 +55,7 @@ const openTaskModal = () => {
 const addTaskInfo = () => {
     const taskName = document.getElementById('name').value;
     const taskDescription = document.getElementById('description').value
-    localStorage.setItem("title", taskName);
+    localStorage.setItem("name", taskName);
     localStorage.setItem("description", taskDescription);
     addTaskModal.classList.add('hidden');
 }

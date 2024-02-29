@@ -1,11 +1,9 @@
 
 
 const getTaskInfo = () => {
+  const tasksArr = JSON.parse(localStorage.getItem("tasks"));
 
-  const getTaskName = localStorage.getItem("name");
-  const getTaskDescription = localStorage.getItem("description");
-
-  return {getTaskName, getTaskDescription};
+  return {tasksArr};
 }
 
 export { getTaskInfo }

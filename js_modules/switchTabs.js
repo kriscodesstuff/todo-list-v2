@@ -1,8 +1,19 @@
 import { getDomElements } from "./getDomElements";
 import { today } from "../js_modules/today";
 import { upcoming } from "../js_modules/upcoming";
+import { allTasks } from "../js_modules/allTasks";
 
 const getDom = getDomElements();
+
+
+const loadDefaultPage = (function() {
+    let loadHomePage = true;
+
+    if(loadHomePage){
+    allTasks();
+    }
+})() 
+    
 
 const switchTabs = () => {
 

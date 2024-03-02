@@ -6,5 +6,7 @@ const getTaskInfo = () => {
 }
 
 export { getTaskInfo }
-//If array doesnt exist create an empty array and push task to it
-//Else if array does exist just push task to the existing array
+//if localStorage 'tasks' array exists let array = localStorage 'tasks'
+//else let array = []
+//Push task object into array
+// set localStorage tasks as array

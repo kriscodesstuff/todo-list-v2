@@ -28,16 +28,23 @@
 # Create a function that will display the task info
     # Import getTaskInfo
     # Pass in a parameter of the parent you want the task to append to 
-    # For each object in the array, create a div
-    # Give the div a class of task
-    # Create a p element and give it the class of name
-    # Create another p element and give it the class of description
-    # Add the innerText to the name p and give it the value of the name in the object
-    # Do the same for the description
-    # Append the task div to the parent div
-    # Append both p elements to the task div
-    # Export the function and import it to the tab that you want to display the task
-    # Pass in the parent and call the function
+    # Check if tasksArr is undefined
+    # If it is then create a p element
+    # Give the p element a class of no-tasks
+    # Set the p element innerText to 'No tasks added'
+    # Append the p element to parent
+    # Else
+        # For each object in the array, create a div
+        # Give the div a class of task
+        # Create a p element and give it the class of name
+        # Create another p element and give it the class of description
+        # Add the innerText to the name p and give it the value of the name in the object
+        # Do the same for the description
+        # Append the task div to the parent div
+        # Append both p elements to the task div
+        # Export the function and import it to the tab that you want to display the task
+        # Pass in the parent and call the function
+    
 # I want there to be a tab called today where the tasks that are scheduled for today will go
 # I want there to be an upcoming tab where the tasks that arent due yet will go
 # I want my user to be able to click the Create New Project button to create a new Project

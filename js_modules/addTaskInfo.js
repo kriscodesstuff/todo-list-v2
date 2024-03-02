@@ -1,4 +1,5 @@
 import { getDomElements } from "./getDomElements";
+import { displayTasks } from "./displayTasks";
 
 const getDom = getDomElements();
 let tasksArr = [];
@@ -16,8 +17,10 @@ const addTaskInfo = () => {
         
         
         getDom.addTaskModal.classList.add('hidden');
+
+        window.location.reload()
     });
-    
+  
 }
 
 

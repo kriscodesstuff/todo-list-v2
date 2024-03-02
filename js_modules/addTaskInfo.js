@@ -12,18 +12,14 @@ const addTaskInfo = () => {
         const taskDescription = document.getElementById('description').value
         const task = {name: taskName,
             description: taskDescription };
-
-        if(JSON.parse(localStorage.getItem("tasks"))){
-            const tasksArr = JSON.parse(localStorage.getItem("tasks"));
-            tasksArr.push(task);
-            localStorage.setItem("tasks", JSON.stringify(tasksArr));
-        }else {
-            const tasksArr = []
-            tasksArr.push(task);
-            localStorage.setItem("tasks", JSON.stringify(tasksArr));
-        }
         
-    
+        const tasksArr = JSON.parse(localStorage.getItem("tasks")) ?
+        JSON.parse(localStorage.getItem("tasks")) : [];
+
+        tasksArr.push(task);
+
+        localStorage.setItem("tasks", JSON.stringify(tasksArr));
+
         getDom.addTaskModal.classList.add('hidden');
 
         window.location.reload()

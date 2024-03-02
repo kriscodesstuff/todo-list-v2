@@ -1,5 +1,4 @@
 
-
 const getTaskInfo = () => {
   const tasksArr = JSON.parse(localStorage.getItem("tasks"));
 

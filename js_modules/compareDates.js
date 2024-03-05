@@ -1,6 +1,6 @@
 import { format } from "date-fns"
 
-const compareDates = (task,tasksArr) => {
+const compareDates = (tasksArr) => {
     const currentDate = format(new Date(), 'yyyy/MM/dd');
 
     tasksArr.forEach(obj => {

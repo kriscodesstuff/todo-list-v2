@@ -18,7 +18,7 @@ const addTaskInfo = () => {
         const tasksArr = JSON.parse(localStorage.getItem("tasks")) ?
         JSON.parse(localStorage.getItem("tasks")) : [];
 
-        compareDates(task,tasksArr);
+        compareDates(tasksArr);
 
         tasksArr.push(task);
 

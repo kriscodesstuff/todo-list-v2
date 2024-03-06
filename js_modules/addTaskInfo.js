@@ -28,7 +28,7 @@ const addTaskInfo = () => {
 
         getDom.addTaskModal.classList.add('hidden');
 
-        window.location.reload()
+        // window.location.reload()
     });
   
 }

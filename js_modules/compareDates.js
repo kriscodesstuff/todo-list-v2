@@ -2,43 +2,56 @@ import { format } from "date-fns"
 
 const compareDates = (task) => {
 
-    const taskDate = task.date.toString().split('-');
-    const currentDate = format(new Date(), 'yyyy-MM-dd').split('-');
+    const taskDateSplit = task.date.toString().split('-');
+    const currentDateSplit = format(new Date(), 'yyyy-MM-dd').split('-');
 
-    const taskDay = Number(taskDate[2]);
-    const taskMonth = Number(taskDate[1]);
-    const taskYear = Number(taskDate[0]);
+    const getTaskDate = (taskDateSplit) => {
+        const taskDay = Number(taskDateSplit[2]);
+        const taskMonth = Number(taskDateSplit[1]);
+        const taskYear = Number(taskDateSplit[0]);
+        return { taskDay, taskMonth, taskYear }
+       
+    }
 
-    const currDay = Number(currentDate[2]);
-    const currMonth = Number(currentDate[1]);
-    const currYear = Number(currentDate[0]);
+    const getCurrentDate = (currentDateSplit) => {
+        const currDay = Number(currentDateSplit[2]);
+        const currMonth = Number(currentDateSplit[1]);
+        const currYear = Number(currentDateSplit[0]);
+        return { currDay, currMonth, currYear }
+    }
 
-    const isToday = () => {
-            return taskDay === currDay && taskMonth === currMonth &&
-            taskYear === currYear;
+    const taskDate = getTaskDate(taskDateSplit);
+    const currentDate = getCurrentDate(currentDateSplit);
+
+    const isToday = (taskDate,currentDate) => {
+
+            return taskDate.taskDay === currentDate.currDay && 
+            taskDate.taskMonth === currentDate.currMonth &&
+            taskDate.taskYear === currentDate.currYear;
+
         }
     
-    const isUpcoming = () => {
-        return taskDay > currDay || taskMonth > currMonth ||
-        taskYear > currYear;
+    const isUpcoming = (taskDate,currentDate) => {
+
+        return taskDate.taskDay > currentDate.currDay || 
+        taskDate.taskMonth > currentDate.currMonth ||
+        taskDate.taskYear > currentDate.currYear;
+
     }
     
+    console.log(isToday(taskDate,currentDate))
+    if(isToday(taskDate,currentDate)){
 
-    if(isToday()){
         task.dateStatus = 'today';
-    }else if(isUpcoming()){
+
+    }else if(isUpcoming(taskDate,currentDate)){
+
         task.dateStatus = 'upcoming';
+
     }else{
         task.dateStatus = 'overdue';
     }
    
-    
-//format current date and task date so that they're both strings
-//split date into array my the / symbol
-//save the first array index(the month) in a variable called the month
-//save the second array index(the day) in a variable called the day
-//do the same thing for the year
-// compare 
     
 }
 
